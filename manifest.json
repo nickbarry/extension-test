@@ -3,7 +3,7 @@
 
   "name": "Extension Testing",
   "description": "A test extension to help me understand how to create Chrome extensions. I have no particular plan yet for its functionality.",
-  "version": "0.1",
+  "version": "0.1.1",
 
   "browser_action": {
     "default_icon": "icon.png",

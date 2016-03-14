@@ -68,7 +68,15 @@ function getImageUrl(searchTerm, callback, errorCallback) {
     var response = x.response;
     if (!response || !response.responseData || !response.responseData.results ||
         response.responseData.results.length === 0) {
-      errorCallback('No response from Google Image search!');
+        var imageResult = document.getElementById('image-result');
+        imageResult.width = '500px';
+        imageResult.height = '500px';
+        imageResult.hidden = false;
+        for(var key in response){
+            errorCallback(response[key] + '\n');
+        }
+
+
       return;
     }
     var firstResult = response.responseData.results[0];
